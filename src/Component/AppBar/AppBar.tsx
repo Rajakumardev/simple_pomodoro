@@ -6,8 +6,10 @@ const StyledText = styled(Text);
 
 export const AppBar = () => {
 	return (
-		<StyledView>
-			<StyledText>Simple Pomodoro</StyledText>
+		<StyledView className="h-16 flex justify-center px-4">
+			<StyledText className="font-bold text-white text-xl">
+				Simple Pomodoro
+			</StyledText>
 		</StyledView>
 	);
 };
