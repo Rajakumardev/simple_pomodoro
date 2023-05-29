@@ -6,18 +6,15 @@
  */
 
 import React from 'react';
-import {
-  View,
-} from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { Navigator } from './src/Navigator';
 
 const App = (): JSX.Element => {
- 
-
-  return (
-    <View></View>
-  );
-}
-
+	return (
+		<NavigationContainer>
+			<Navigator />
+		</NavigationContainer>
+	);
+};
 
 export default App;
