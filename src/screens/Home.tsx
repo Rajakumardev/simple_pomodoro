@@ -25,23 +25,23 @@ export const Home = (): JSX.Element => {
 					<ControlButton
 						onPressCallback={() => onControlBtnPress(PLAYING)}
 						className="text-xl w-20 h-20 flex justify-center 
-							items-center border-2 border-white"
+							items-center border-4 border-accent-900"
 					>
-						<Icon name="play" size={20} color={'#fff'} />
+						<Icon name="play" size={20} color={'#47FFDD'} />
 					</ControlButton>
 					<ControlButton
 						onPressCallback={() => onControlBtnPress(PASUED)}
 						className="text-xl w-20 h-20 flex justify-center 
-							items-center border-2 border-white"
+							items-center border-4 border-accent-900"
 					>
-						<Icon name="pause" size={20} color={'#fff'} />
+						<Icon name="pause" size={20} color={'#47FFDD'} />
 					</ControlButton>
 					<ControlButton
 						onPressCallback={() => onControlBtnPress(PASUED)}
 						className="text-xl w-20 h-20 flex justify-center 
-							items-center border-2 border-white"
+							items-center border-4 border-accent-900"
 					>
-						<Icon name="forward" size={20} color={'#fff'} />
+						<Icon name="forward" size={20} color={'#47FFDD'} />
 					</ControlButton>
 				</StyledView>
 			</StyledView>

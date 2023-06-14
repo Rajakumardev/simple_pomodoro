@@ -18,7 +18,7 @@ export const ControlButton = ({
 	return (
 		<TouchableOpacity onPress={onPressCallback}>
 			<StyledView
-				className={`text-white bg-accent-900 p-4 rounded-full  shadow-md ${className}`}
+				className={`text-white bg-primary-900 p-4 rounded-full  shadow-md ${className}`}
 			>
 				{children}
 			</StyledView>

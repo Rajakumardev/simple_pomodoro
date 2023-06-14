@@ -5,10 +5,10 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          900: "#483A58"
+          900: "#030807"
         },
         accent: {
-          900: "#241d2c"
+          900: "#47FFDD"
         }
       }
     },

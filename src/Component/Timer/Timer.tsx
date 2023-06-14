@@ -39,7 +39,7 @@ export const Timer = () => {
 					cx={viewBoxWidth / 2}
 					cy={viewBoxHeight / 2}
 					r={radius}
-					stroke={'#fff'}
+					stroke={'#47FFDD'}
 					strokeWidth={20}
 					strokeDasharray={CIRCLE_LENGTH}
 					strokeDashoffset={

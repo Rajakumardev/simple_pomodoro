@@ -6,10 +6,10 @@ const Stack = createStackNavigator();
 const screenOptions = {
 	headerShown: true,
 	headerStyle: {
-		backgroundColor: '#483A58',
+		backgroundColor: '#030807',
 		elevation: 0,
 	},
-	headerTintColor: '#fff',
+	headerTintColor: '#47FFDD',
 };
 
 export const Navigator = (): JSX.Element => {
