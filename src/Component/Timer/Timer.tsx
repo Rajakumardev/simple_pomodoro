@@ -3,6 +3,8 @@ import { styled } from 'nativewind';
 import { Text, View } from 'react-native';
 import { Circle, Svg } from 'react-native-svg';
 import { useTimerStore } from '../../store';
+import { useInterval } from '../../utils/customHooks';
+import { PASUED, PLAYING } from '../../constants';
 
 type Props = {
 	seconds: number;
@@ -16,15 +18,17 @@ const viewBoxHeight = 400;
 const viewBoxWidth = 400;
 
 export const Timer = () => {
-	const { timerSecond, setTimerSecond } = useTimerStore();
-	useEffect(() => {
-		const tick = setInterval(() => {
+	const { timerSecond, timerState, setTimerSecond, setTimerState } =
+		useTimerStore();
+
+	useInterval(() => {
+		if (timerSecond > 0 && timerState === PLAYING) {
 			setTimerSecond(timerSecond - 1);
-		}, 1000);
-		return () => {
-			clearInterval(tick);
-		};
-	}, []);
+		} else {
+			setTimerState(PASUED);
+		}
+	}, 1000);
+
 	return (
 		<StyledView className="relative flex-1">
 			<Svg
@@ -38,7 +42,9 @@ export const Timer = () => {
 					stroke={'#fff'}
 					strokeWidth={20}
 					strokeDasharray={CIRCLE_LENGTH}
-					strokeDashoffset={CIRCLE_LENGTH * 0}
+					strokeDashoffset={
+						(CIRCLE_LENGTH * ((timerSecond / 100) * 100)) / 100
+					}
 				/>
 			</Svg>
 			<StyledView className="flex absolute justify-center items-center w-full h-full">
