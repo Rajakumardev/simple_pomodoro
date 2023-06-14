@@ -9,7 +9,7 @@ type store = {
 };
 
 export const useTimerStore = create<store>()((set) => ({
-	timerSecond: 3310,
+	timerSecond: 100,
 	timerState: PASUED,
 	setTimerState: (newTimerState: string) =>
 		set((state) => ({
