@@ -1,8 +1,12 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { Home } from '../screens/Home';
+import { View } from 'react-native';
+import { styled } from 'nativewind';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Stack = createStackNavigator();
-
+const StyledView = styled(View);
 const screenOptions = {
 	headerShown: true,
 	headerStyle: {
@@ -10,6 +14,13 @@ const screenOptions = {
 		elevation: 0,
 	},
 	headerTintColor: '#47FFDD',
+	headerRight: () => (
+		<TouchableOpacity>
+			<StyledView className="bg-transparent text-accent-900">
+				<Icon name="cog" size={20} color={'#47FFDD'} />
+			</StyledView>
+		</TouchableOpacity>
+	),
 };
 
 export const Navigator = (): JSX.Element => {
