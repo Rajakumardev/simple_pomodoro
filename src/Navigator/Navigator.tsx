@@ -15,6 +15,14 @@ const screenOptions = {
 		elevation: 0,
 	},
 	headerTintColor: '#47FFDD',
+	cardOverlay: () => (
+		<View
+			style={{
+				flex: 1,
+				backgroundColor: '#030807',
+			}}
+		/>
+	),
 };
 
 export const Navigator = (): JSX.Element => {
