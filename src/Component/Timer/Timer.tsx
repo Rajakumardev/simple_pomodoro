@@ -31,20 +31,26 @@ export const Timer = () => {
 
 	return (
 		<StyledView className="relative flex-1">
-			<Svg
-				className="fill-primary-900"
-				viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
-			>
+			<Svg viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}>
 				<Circle
 					cx={viewBoxWidth / 2}
 					cy={viewBoxHeight / 2}
 					r={radius}
 					stroke={'#47FFDD'}
-					strokeWidth={20}
+					strokeWidth={30}
 					strokeDasharray={CIRCLE_LENGTH}
 					strokeDashoffset={
 						(CIRCLE_LENGTH * ((timerSecond / 100) * 100)) / 100
 					}
+				/>
+				<Circle
+					cx={viewBoxWidth / 2}
+					cy={viewBoxHeight / 2}
+					r={radius}
+					stroke={'#47FFDD59'}
+					strokeWidth={20}
+					strokeDasharray={CIRCLE_LENGTH}
+					strokeDashoffset={1}
 				/>
 			</Svg>
 			<StyledView className="flex absolute justify-center items-center w-full h-full">
