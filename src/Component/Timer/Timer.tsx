@@ -49,8 +49,6 @@ export const Timer = () => {
 					r={radius}
 					stroke={'#47FFDD59'}
 					strokeWidth={20}
-					strokeDasharray={CIRCLE_LENGTH}
-					strokeDashoffset={1}
 				/>
 			</Svg>
 			<StyledView className="flex absolute justify-center items-center w-full h-full">
