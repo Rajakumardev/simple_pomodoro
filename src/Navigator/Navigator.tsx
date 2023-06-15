@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { styled } from 'nativewind';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { Settings } from '../screens/Settings';
 
 const Stack = createStackNavigator();
 const StyledView = styled(View);
@@ -14,13 +15,6 @@ const screenOptions = {
 		elevation: 0,
 	},
 	headerTintColor: '#47FFDD',
-	headerRight: () => (
-		<TouchableOpacity>
-			<StyledView className="bg-transparent text-accent-900">
-				<Icon name="cog" size={20} color={'#47FFDD'} />
-			</StyledView>
-		</TouchableOpacity>
-	),
 };
 
 export const Navigator = (): JSX.Element => {
@@ -29,8 +23,26 @@ export const Navigator = (): JSX.Element => {
 			<Stack.Screen
 				name="Home"
 				component={Home}
-				options={{
+				options={({ navigation }) => ({
 					title: 'Pomodoro',
+					headerRight: () => (
+						<TouchableOpacity
+							onPress={() => {
+								navigation.navigate('Settings');
+							}}
+						>
+							<StyledView className="bg-transparent text-accent-900 mr-2">
+								<Icon name="cog" size={20} color={'#47FFDD'} />
+							</StyledView>
+						</TouchableOpacity>
+					),
+				})}
+			></Stack.Screen>
+			<Stack.Screen
+				name="Settings"
+				component={Settings}
+				options={{
+					title: 'Settings',
 				}}
 			></Stack.Screen>
 		</Stack.Navigator>
