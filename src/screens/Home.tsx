@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled } from 'nativewind';
-import { Text, View } from 'react-native';
-import { Svg, Circle } from 'react-native-svg';
+import { View } from 'react-native';
 import { ControlButton } from '../Component';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { useTimerStore } from '../store';
